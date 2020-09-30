@@ -28,6 +28,12 @@ pipeline {
                 jacoco()
             }
         }
+        stage("Package"):
+        {
+            steps{
+                sh 'mvn package -DskipTests'
+            }
+        }
         
     }
 
