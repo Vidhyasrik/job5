@@ -28,7 +28,7 @@ pipeline {
                 jacoco()
             }
         }
-        stage("Package"):
+        stage("Package")
         {
             steps{
                 sh 'mvn package -DskipTests'
