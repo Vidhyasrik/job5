@@ -26,7 +26,27 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-  </dependencies>
+    <dependency>
+<groupId>org.sonarsource.scanner.maven</groupId>
+<artifactId>sonar-maven-plugin</artifactId>
+<version>3.2</version>
+</dependency>
+  </dependencies><profiles>
+<profile>
+<id>sonar</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+<properties>
+
+<sonar.host.url>
+http://34.222.165.71:9000
+</sonar.host.url>
+</properties>
+</profile>
+</profiles>
+
+
 
   <build>
     <finalName>job5</finalName>
